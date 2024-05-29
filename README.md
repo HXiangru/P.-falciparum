@@ -32,6 +32,23 @@ samtools faidx GCF_000002765.6_GCA_000002765_genomic.fna
 samtools index aln.sorted.bam
 ```
 
+## Visualisation
+1. Library packages and import the file
+```r
+library(Rsamtools)
+library(ggplot2)
+bam_file <- "aln.sorted.bam"
+quickBamFlagSummary(bam_file)
+bam <- scanBam(bam_file)
+```
+2. Convert data to df and filter unaligned reads
+```r
+tmp=as.data.frame(do.call(cbind,lapply(bam[[1]], as.character)))
+tmp=tmp[tmp$flag!=4,] 
+```
+
+
+
 
 
 
