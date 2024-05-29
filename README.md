@@ -10,7 +10,7 @@
 git clone https://github.com/lh3/minimap2
 cd minimap2 && make
 ```
-2. Aligment
+2. Alignment
 ```linux
 minimap2 -ax map-ont GCF_000002765.6_GCA_000002765_genomic.fna reads.fastq > alignment.sam
 ```
