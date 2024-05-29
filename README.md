@@ -32,7 +32,7 @@ samtools faidx GCF_000002765.6_GCA_000002765_genomic.fna
 samtools index aln.sorted.bam
 ```
 
-## Visualisation
+## Visualisation in R
 1. Library packages and import the file
 ```r
 library(Rsamtools)
